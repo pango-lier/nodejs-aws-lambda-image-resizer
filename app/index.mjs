@@ -7,7 +7,7 @@ import querystring from "querystring";
 const S3 = new AWS.S3({ signatureVersion: "v4" });
 
 // environment variables
-const BUCKET = process.env.BUCKET;
+const BUCKET = 'cutom';
 // const WHITELISTED_DIMENSIONS = process.env.WHITELISTED_DIMENSIONS
 //   ? Object.freeze(process.env.WHITELISTED_DIMENSIONS.split(" "))
 //   : null;
@@ -42,7 +42,7 @@ function getResource(resourcePath) {
 export const handler = async (event) => {
   const pathParameters = event.pathParameters;
   const path =
-    pathParameters.proxy || pathParameters[Object.keys(pathParameters)[0]];
+    pathParameters?.proxy || pathParameters[Object.keys(pathParameters)[0]];
 
   // check if a resized option exists.
   let existingResized = await getResource(path);
