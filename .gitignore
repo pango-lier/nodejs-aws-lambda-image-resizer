@@ -3,3 +3,6 @@
 *.zip
 /.idea/
 *.DS_Store
+/layer/aws-sdk/nodejs/node_modules
+/layer/sharp/nodejs/node_modules
+/layer/querystring/nodejs/node_modules
