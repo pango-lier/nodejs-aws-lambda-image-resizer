@@ -39,7 +39,7 @@ function getResource(resourcePath) {
   });
 }
 
-exports.handler = async (event) => {
+export const handler = async (event) => {
   const pathParameters = event.pathParameters;
   const path =
     pathParameters.proxy || pathParameters[Object.keys(pathParameters)[0]];
