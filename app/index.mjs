@@ -1,8 +1,8 @@
 "use strict";
 
-const AWS = require("aws-sdk");
-const Sharp = require("sharp");
-const querystring = require("querystring");
+import AWS from "aws-sdk";
+import Sharp from "sharp";
+import querystring from "querystring";
 
 const S3 = new AWS.S3({ signatureVersion: "v4" });
 
